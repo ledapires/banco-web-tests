@@ -12,7 +12,7 @@ describe('Login', () => {
       cy.get('#senha').click().type(credenciais.valida.senha)
     })
 
-    cy.get('#login-section > .btn').click()
+    cy.contains('button', 'Entrar').click()
 
     //Assert
     cy.contains('h4', 'Realizar Transferência').should('be.visible')
